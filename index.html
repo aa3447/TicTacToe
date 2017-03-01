@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="jquery-3.1.1.min.js"></script>
+        <script src="script.js" type="text/javascript"></script>
+    </head>
+    <body class="d-flex flex-column justify-content-center" >
+        <div id="wapper" class="container " >          
+            <p id="win" class="text-center"></p>
+            <div class="text-center">
+            <p>Player's Score: <span id="playerScore">0</span> Computer's Score: <span id="computerScore">0</span></p>      
+            </div>
+            <div class="text-center">
+                        <button type ="button" id="Chose_X" class="btn " value="">X</button>
+                        <button type ="button"id="Chose_O" class="btn " value="">O</button>
+                        <button type ="button" id="NewGame" class="btn " value="">New Game</button>
+                        <button type ="button" id="NightMode" class="btn " value="">Night Mode</button>
+            </div>
+            <div class="table-responsive">    
+                    <table class="table table-sm ">
+                        <tr >
+                            <td class=""><button id="0" class="btn btn-block" value="" disabled>-</button></td>
+                            <td class=""><button id="1" class="btn btn-block" value="" disabled>-</button></td>
+                            <td class=""><button id="2" class="btn btn-block" value="" disabled>-</button></td>
+                            
+                        </tr>
+                        <tr>
+                            <td class=""><button id="3" class="btn btn-block" value="" disabled>-</button></td>
+                            <td class=""><button id="4" class="btn btn-block" value="" disabled>-</button></td>
+                            <td class=""><button id="5" class="btn btn-block" value="" disabled>-</button></td>
+                            
+                       </tr>    
+                        <tr>
+                            <td class=""> <button id="6" class="btn btn-block" value="" disabled>-</button></td>
+                            <td class=""> <button id="7" class="btn btn-block" value="" disabled>-</button></td>
+                            <td class=""> <button id="8" class="btn btn-block" value="" disabled>-</button></td>
+                        </tr>        
+                </table>
+            </div>
+        </div> 
+    </body>
+</html>

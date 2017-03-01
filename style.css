@@ -1,0 +1,29 @@
+
+html{
+    height: 100%;
+    font-size: 150%;
+}
+body{
+    background-color: white;
+    min-height: 100%;
+    color: black;
+    
+}
+button{
+    background-color: Transparent;
+    border: none;
+    outline:none;
+    font-size: 1rem;
+}
+td{
+    border: 3px solid black;
+}
+
+
+
+  
+
+
+
+
+
