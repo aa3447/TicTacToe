@@ -259,11 +259,9 @@ $(function() {
             $("tr button").prop("disabled",true);
         } 
         else{
-            $("#0").prop("disabled",true);
+            $(this).prop("disabled",true);
             findBestMove(board);
         }      
-                     
- 
  
         });
 });
