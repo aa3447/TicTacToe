@@ -244,9 +244,12 @@ $(function() {
             ];
             $("#win").text("");
      });
-    $("#0").click(function(){
-            $("#0").text(p1);
-            board[0][0] = p1;    
+    $(".grid").click(function(){
+            var id = parseInt($(this).attr('id'));  
+            $(this).text(p1);       
+            var row = Math.floor(id/3);
+            var col = id%3;
+            board[row][col] = p1; 
         if( evaluate(board) === -10){
             $("#win").text("Player Wins!");
             $("tr button").prop("disabled",true);
@@ -258,141 +261,10 @@ $(function() {
         else{
             $("#0").prop("disabled",true);
             findBestMove(board);
-        }
-     });
-      $("#1").click(function(){
-           $("#1").text(p1);
-           board[0][1] = p1;
-        if( evaluate(board) === -10){
-            $("#win").text("Player Wins!");
-            $("tr button").prop("disabled",true);
-        }
-        else if(!isMovesLeft(board)){
-            $("#win").text("Tie!");
-            $("tr button").prop("disabled",true);
-        }
-        else{
-            $("#1").prop("disabled",true);
-            findBestMove(board);
-        }
-     
-     });
-      $("#2").click(function(){
-           $("#2").text(p1);
-           board[0][2] = p1;
-        if( evaluate(board) === -10){
-            $("#win").text("Player Wins!");
-            $("tr button").prop("disabled",true);
-        }
-        else if(!isMovesLeft(board)){
-            $("#win").text("Tie!");
-            $("tr button").prop("disabled",true);
-        }
-        else{
-            $("#2").prop("disabled",true);
-            findBestMove(board);
-        }
-     
-     });
-    $("#3").click(function(){
-            $("#3").text(p1);
-            board[1][0] = p1;
-        if( evaluate(board) === -10){
-            $("#win").text("Player Wins!");
-            $("tr button").prop("disabled",true);
-        }
-        else if(!isMovesLeft(board)){
-            $("#win").text("Tie!");
-            $("tr button").prop("disabled",true);
-        }
-        else{
-            $("#3").prop("disabled",true);
-            findBestMove(board);
-        }
-        
-     });
-    $("#4").click(function(){
-            $("#4").text(p1);
-            board[1][1] = p1;
-        if( evaluate(board) === -10){
-            $("#win").text("Player Wins!");
-            $("tr button").prop("disabled",true);
-        }
-        else if(!isMovesLeft(board)){
-            $("#win").text("Tie!");
-            $("tr button").prop("disabled",true);
-        }
-        else{
-            $("#4").prop("disabled",true);
-            findBestMove(board);
-        }
-     });
-    $("#5").click(function(){
-        $("#5").text(p1);
-        board[1][2] = p1;
-        if(evaluate(board) === -10){
-            $("#win").text("Player Wins!");
-            $("tr button").prop("disabled",true);
-            }
-        else if(!isMovesLeft(board)){
-            $("#win").text("Tie!");
-            $("tr button").prop("disabled",true);
-        }
-        else{
-            $("#5").prop("disabled",true);
-            findBestMove(board);
-        }
-     });
-    $("#6").click(function(){
-            $("#6").text(p1);
-            board[2][0] = p1;
-        if( evaluate(board) === -10){
-            $("#win").text("Player Wins!");
-            $("tr button").prop("disabled",true);
-        }
-        else if(!isMovesLeft(board)){
-            $("#win").text("Tie!");
-            $("tr button").prop("disabled",true);
-        }
-        else{
-            $("#6").prop("disabled",true);
-            findBestMove(board);
-        }
-     });
-    $("#7").click(function(){
-            $("#7").text(p1);
-            board[2][1] = p1;  
-        if( evaluate(board) === -10){
-            $("#win").text("Player Wins!");
-            $("tr button").prop("disabled",true);
-            }
-        else if(!isMovesLeft(board)){
-            $("#win").text("Tie!");
-            $("tr button").prop("disabled",true);
-        }
-        else{
-            $("#7").prop("disabled",true);
-            findBestMove(board);
-        }
-     });
-    $("#8").click(function(){
-        $("#8").text(p1);
-        board[2][2] = p1; 
-        if( evaluate(board) === -10){
-            $("#win").text("Player Wins!");
-            $("tr button").prop("disabled",true);
-            }
-        else if(!isMovesLeft(board)){
-            $("#win").text("Tie!");
-            $("tr button").prop("disabled",true);
-        }
-        else{
-            $("#8").prop("disabled",true);
-            findBestMove(board);
-        }
-        
-     });
+        }      
+                     
  
  
+        });
 });
    
